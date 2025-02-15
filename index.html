@@ -1,172 +1,122 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI SkillHub | AI-ассистенты и обучение</title>
     <style>
+        /* Подключаем шрифты */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         /* Общие стили */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #F8FAFF; /* Светлый, футуристичный фон */
-            color: #1A1A2E;
+            background: linear-gradient(135deg, #0F052D, #240A64);
+            color: #FFFFFF;
             margin: 0;
             padding: 0;
             text-align: center;
-            animation: fadeIn 1s ease-in;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Контейнер */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        header {
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #F8FAFF, #E0E4FF);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        /* Левая часть (изображение) */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
-        .logo {
-            width: 140px;
+        .image-container img {
+            max-width: 100%;
             height: auto;
-            margin-bottom: 15px;
-            animation: logoBounce 2s infinite alternate;
+            border-radius: 15px;
         }
 
-        @keyframes logoBounce {
-            from { transform: translateY(0px); }
-            to { transform: translateY(4px); }
+        /* Правая часть (текст) */
+        .text-container {
+            flex: 1;
+            text-align: left;
+            padding-left: 50px;
         }
 
-        h1 {
+        .text-container h1 {
             font-size: 2.8em;
-            color: #6A0DAD;
-            text-shadow: 0px 0px 10px #6A0DAD;
-            font-weight: 600;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 20px auto;
-            max-width: 700px;
-            line-height: 1.5;
-        }
-
-        .cta-button {
-            background: #6A0DAD;
+            font-weight: 700;
             color: #FFFFFF;
-            padding: 14px 28px;
-            border: none;
-            border-radius: 30px;
+            line-height: 1.2;
+        }
+
+        .text-container h1 span {
+            color: #9A6BFF;
+        }
+
+        .text-container p {
+            font-size: 1.2em;
+            color: #CCCCCC;
+            line-height: 1.5;
+            margin-top: 15px;
+        }
+
+        /* Кнопка */
+        .cta-button {
+            display: inline-block;
+            background: #9A6BFF;
+            color: #FFFFFF;
             font-size: 1.2em;
             font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
+            padding: 14px 28px;
+            border-radius: 30px;
             text-decoration: none;
-            display: inline-block;
+            transition: 0.3s;
             margin-top: 20px;
         }
 
         .cta-button:hover {
-            background: #8A2BE2;
-            box-shadow: 0px 0px 20px #8A2BE2;
+            background: #A77BFF;
+            box-shadow: 0px 0px 15px #A77BFF;
             transform: scale(1.05);
         }
 
-        .section {
-            padding: 60px 20px;
-            animation: fadeInUp 1s ease-in-out;
+        /* Медиа-запросы для адаптации */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-container {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+            .image-container img {
+                max-width: 80%;
+            }
         }
-
-        .dark-section {
-            background: #E5E7FF;
-            padding: 70px 20px;
-            border-radius: 20px;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .feature {
-            background: #D8DBFF;
-            padding: 20px;
-            border-radius: 12px;
-            width: 280px;
-            font-weight: bold;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .footer {
-            background: #6A0DAD;
-            padding: 20px;
-            color: white;
-            font-size: 0.9em;
-        }
-
     </style>
 </head>
 <body>
 
-<header>
-    <img src="logo_resized.png" alt="AI SkillHub Logo" class="logo">
-    <h1>AI SkillHub</h1>
-    <p>Разработка AI-ассистентов, автоматизация процессов и обучение нейросетям.</p>
-    <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
-</header>
-
-<section class="section">
-    <h2>Наши услуги</h2>
-    <div class="features">
-        <div class="feature">📌 Разработка AI-ассистентов</div>
-        <div class="feature">🤖 Чат-боты для бизнеса</div>
-        <div class="feature">🚀 Обучение и мастер-классы</div>
+<div class="container">
+    <!-- Левая часть (изображение) -->
+    <div class="image-container">
+        <img src="logo_resized.png" alt="AI SkillHub">
     </div>
-</section>
 
-<section class="section dark-section">
-    <h2>Почему выбирают нас?</h2>
-    <div class="features">
-        <div class="feature">✔️ 100+ успешных AI-проектов</div>
-        <div class="feature">✔️ Эксперты с опытом 5+ лет</div>
-        <div class="feature">✔️ Поддержка и консультации</div>
+    <!-- Правая часть (текст) -->
+    <div class="text-container">
+        <h1>Как стать <span>экспертом в AI</span> <br>и автоматизировать бизнес?</h1>
+        <p>Изучи передовые технологии AI за 2 дня и узнай, как создать умных AI-ассистентов, которые увеличат твою продуктивность.</p>
+        <a href="https://t.me/yourbot" class="cta-button">Присоединиться к интенсиву в Telegram</a>
     </div>
-</section>
-
-<section class="section">
-    <h2>Отзывы наших клиентов</h2>
-    <div class="features">
-        <div class="feature">💬 «AI-ассистент сэкономил нам 40% времени!»</div>
-        <div class="feature">💬 «Боты теперь делают всю рутину за нас!»</div>
-        <div class="feature">💬 «Лучшее обучение по AI, всё понятно!»</div>
-    </div>
-</section>
-
-<section class="section dark-section">
-    <h2>Хотите внедрить AI?</h2>
-    <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время!</p>
-    <a href="https://t.me/yourbot" class="cta-button">Оставить заявку</a>
-</section>
-
-<footer class="footer">
-    <p>© 2025 AI SkillHub | Контакты: info@aiskillhub.com | Telegram: @yourbot</p>
-</footer>
+</div>
 
 </body>
 </html>
