@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
         /* Общие стили */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #F0F3FF; /* Светлый фон */
+            background: #F8FAFF; /* Светлый, футуристичный фон */
             color: #1A1A2E;
             margin: 0;
             padding: 0;
@@ -23,38 +23,40 @@
 
         header {
             padding: 50px 20px;
-            background: linear-gradient(135deg, #F0F3FF, #D8DBFF);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #F8FAFF, #E0E4FF);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .logo {
-            width: 150px;
+            width: 140px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             animation: logoBounce 2s infinite alternate;
         }
 
         @keyframes logoBounce {
             from { transform: translateY(0px); }
-            to { transform: translateY(5px); }
+            to { transform: translateY(4px); }
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.8em;
             color: #6A0DAD;
             text-shadow: 0px 0px 10px #6A0DAD;
+            font-weight: 600;
         }
 
         p {
             font-size: 1.2em;
             margin: 20px auto;
             max-width: 700px;
+            line-height: 1.5;
         }
 
         .cta-button {
             background: #6A0DAD;
             color: #FFFFFF;
-            padding: 15px 30px;
+            padding: 14px 28px;
             border: none;
             border-radius: 30px;
             font-size: 1.2em;
@@ -79,7 +81,7 @@
 
         .dark-section {
             background: #E5E7FF;
-            padding: 80px 20px;
+            padding: 70px 20px;
             border-radius: 20px;
         }
 
@@ -95,7 +97,7 @@
         .feature {
             background: #D8DBFF;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             width: 280px;
             font-weight: bold;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -123,7 +125,7 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="AI SkillHub Logo" class="logo">
+    <img src="logo.png" alt="AI SkillHub Logo" class="logo">  <!-- Подставь логотип в репозитории GitHub -->
     <h1>AI SkillHub</h1>
     <p>Разработка AI-ассистентов, автоматизация процессов и обучение нейросетям.</p>
     <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
