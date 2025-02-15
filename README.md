@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -25,15 +25,15 @@
         }
 
         .logo {
-            width: 150px;
+            width: 140px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             animation: logoBounce 2s infinite alternate;
         }
 
         @keyframes logoBounce {
             from { transform: translateY(0px); }
-            to { transform: translateY(5px); }
+            to { transform: translateY(4px); }
         }
 
         h1 {
@@ -77,7 +77,7 @@
         }
 
         .dark-section {
-            background: #1A093C;
+            background: rgba(255, 255, 255, 0.05);
             padding: 80px 20px;
             border-radius: 20px;
         }
@@ -92,12 +92,12 @@
         }
 
         .feature {
-            background: #2C1068;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 12px;
             width: 280px;
             font-weight: bold;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
         }
 
@@ -159,7 +159,7 @@
 </section>
 
 <footer class="footer">
-    <p>© 2025 AI SkillHub | Telegram: https//t.me/proverka555777_bot</p>
+    <p>© 2025 AI SkillHub | Telegram: https//t.me/proverka555777_bot </p>
 </footer>
 
 </body>
