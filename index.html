@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -15,40 +15,36 @@
             color: #FFFFFF;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
 
         /* Шапка */
         header {
-            padding: 50px 20px;
             text-align: center;
+            padding: 60px 20px;
         }
 
         .logo {
-            width: 140px;
-            height: auto;
-            margin-bottom: 15px;
-            animation: logoBounce 2s infinite alternate;
-        }
-
-        @keyframes logoBounce {
-            from { transform: translateY(0px); }
-            to { transform: translateY(4px); }
+            width: 150px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             font-weight: 700;
             color: #FFFFFF;
             text-shadow: 0px 0px 15px #9A6BFF;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #CCCCCC;
-            line-height: 1.5;
             max-width: 700px;
-            margin: auto;
+            margin: 20px auto;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
 
         /* Кнопка */
@@ -56,13 +52,16 @@
             display: inline-block;
             background: #9A6BFF;
             color: #FFFFFF;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: bold;
-            padding: 14px 28px;
-            border-radius: 30px;
+            padding: 16px 32px;
+            border-radius: 50px;
             text-decoration: none;
             transition: 0.3s;
             margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(154, 107, 255, 0.5);
+            opacity: 0;
+            animation: fadeInUp 1.4s ease-in-out forwards;
         }
 
         .cta-button:hover {
@@ -71,34 +70,69 @@
             transform: scale(1.05);
         }
 
-        /* Разделы */
-        .section {
-            padding: 60px 20px;
+        /* Анимации */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .dark-section {
-            background: rgba(255, 255, 255, 0.05);
+        /* Секции */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
             padding: 80px 20px;
-            border-radius: 20px;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .image-container img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #FFFFFF;
         }
 
         .features {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: auto;
+            margin-top: 30px;
         }
 
         .feature {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            border-radius: 12px;
+            border-radius: 15px;
             width: 280px;
             font-weight: bold;
+            text-align: center;
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
 
         .feature:hover {
@@ -111,7 +145,24 @@
             background: #6A0DAD;
             padding: 20px;
             color: white;
-            font-size: 0.9em;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-container {
+                text-align: center;
+            }
+
+            .image-container img {
+                width: 100%;
+            }
         }
 
     </style>
@@ -125,54 +176,46 @@
     <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
 </header>
 
+<!-- Услуги -->
 <section class="section">
-    <h2>Наши услуги</h2>
-    <div class="features">
-        <div class="feature">📌 Разработка AI-ассистентов для бизнеса и личного использования</div>
-        <div class="feature">🤖 Чат-боты с интеграцией в Telegram и CRM</div>
-        <div class="feature">🚀 Автоматизация процессов без программирования</div>
-        <div class="feature">📚 Обучение работе с AI-инструментами</div>
-        <div class="feature">🎨 AI для создания контента и маркетинга</div>
+    <div class="text-container">
+        <h2>Наши услуги</h2>
+        <p>Мы поможем вам внедрить AI-ассистентов и автоматизировать ваш бизнес.</p>
+        <div class="features">
+            <div class="feature">📌 Разработка AI-ассистентов</div>
+            <div class="feature">🤖 Чат-боты для бизнеса</div>
+            <div class="feature">🚀 Обучение и мастер-классы</div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="services.png" alt="AI Services">
     </div>
 </section>
 
-<section class="section dark-section">
-    <h2>Почему выбирают нас?</h2>
-    <div class="features">
-        <div class="feature">✔️ 100+ успешных AI-проектов</div>
-        <div class="feature">✔️ Опыт работы с бизнесом и стартапами</div>
-        <div class="feature">✔️ Экспертная поддержка и консультации</div>
-        <div class="feature">✔️ Практические мастер-классы</div>
-        <div class="feature">✔️ Внедрение AI без сложностей</div>
-    </div>
-</section>
-
+<!-- Отзывы -->
 <section class="section">
-    <h2>Отзывы наших клиентов</h2>
-    <div class="features">
-        <div class="feature">💬 «AI-ассистент помог увеличить продажи на 40%! Отличное обучение!»</div>
-        <div class="feature">💬 «Теперь мой бизнес автоматизирован, а я трачу меньше времени на рутину.»</div>
-        <div class="feature">💬 «Обучение прошло легко, и теперь я создаю AI-ботов для работы!»</div>
-        <div class="feature">💬 «Никогда не думала, что AI может помочь в маркетинге – теперь использую каждый день!»</div>
+    <div class="image-container">
+        <img src="reviews.png" alt="Отзывы">
+    </div>
+    <div class="text-container">
+        <h2>Отзывы наших клиентов</h2>
+        <div class="features">
+            <div class="feature">💬 «AI-ассистент увеличил продажи на 40%!»</div>
+            <div class="feature">💬 «Теперь мой бизнес автоматизирован!»</div>
+        </div>
     </div>
 </section>
 
-<section class="section dark-section">
-    <h2>Как это работает?</h2>
-    <div class="features">
-        <div class="feature">📅 Выбираете мастер-класс или услугу</div>
-        <div class="feature">🔗 Получаете доступ к материалам и AI-решениям</div>
-        <div class="feature">💡 Настраиваете AI-инструменты под себя</div>
-        <div class="feature">🚀 Внедряете AI в бизнес и получаете результат</div>
-    </div>
-</section>
-
+<!-- CTA -->
 <section class="section">
-    <h2>Готовы начать?</h2>
-    <p>Записывайтесь на обучение или консультацию – и начните внедрять AI уже сегодня!</p>
-    <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
+    <div class="text-container">
+        <h2>Готовы начать?</h2>
+        <p>Записывайтесь на обучение или консультацию – и начните внедрять AI уже сегодня!</p>
+        <a href="https://t.me/yourbot" class="cta-button">Записаться</a>
+    </div>
 </section>
 
+<!-- Подвал -->
 <footer class="footer">
     <p>© 2025 AI SkillHub | Контакты: info@aiskillhub.com | Telegram: @yourbot</p>
 </footer>
