@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -159,7 +159,7 @@
 </section>
 
 <footer class="footer">
-    <p>© 2025 AI SkillHub | Telegram: https//t.me/proverka555777_bot </p>
+    <p>© 2025 AI SkillHub | Telegram: https//t.me/proverka555777_bot</p>
 </footer>
 
 </body>
