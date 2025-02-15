@@ -11,28 +11,40 @@
         /* Общие стили */
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0F052D, #240A64);
+            background: #0F052D;
             color: #FFFFFF;
             margin: 0;
             padding: 0;
         }
 
+        /* Градиентный фон */
+        .gradient-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(154, 107, 255, 0.2), rgba(36, 10, 100, 0.9));
+            z-index: -1;
+        }
+
         /* Шапка */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 100px 20px;
+            position: relative;
         }
 
         .logo {
             width: 150px;
             margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: 700;
-            color: #FFFFFF;
-            text-shadow: 0px 0px 15px #9A6BFF;
+            text-shadow: 0px 0px 20px #9A6BFF;
             opacity: 0;
             animation: fadeInUp 1s ease-in-out forwards;
         }
@@ -50,24 +62,24 @@
         /* Кнопка */
         .cta-button {
             display: inline-block;
-            background: #9A6BFF;
+            background: linear-gradient(135deg, #9A6BFF, #6A0DAD);
             color: #FFFFFF;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
-            padding: 16px 32px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             transition: 0.3s;
             margin-top: 20px;
-            box-shadow: 0px 4px 10px rgba(154, 107, 255, 0.5);
+            box-shadow: 0px 4px 20px rgba(154, 107, 255, 0.5);
             opacity: 0;
             animation: fadeInUp 1.4s ease-in-out forwards;
         }
 
         .cta-button:hover {
-            background: #A77BFF;
-            box-shadow: 0px 0px 15px #A77BFF;
             transform: scale(1.05);
+            background: linear-gradient(135deg, #A77BFF, #8A2BE2);
+            box-shadow: 0px 0px 25px #A77BFF;
         }
 
         /* Анимации */
@@ -76,22 +88,27 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Секции */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Блоки */
         .section {
             display: flex;
             align-items: center;
             justify-content: space-between;
             max-width: 1200px;
             margin: auto;
-            padding: 80px 20px;
+            padding: 100px 20px;
+            position: relative;
         }
 
         .text-container {
             flex: 1;
             padding: 20px;
-            text-align: left;
             opacity: 0;
-            animation: fadeInUp 1s ease-in-out forwards;
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
 
         .image-container {
@@ -99,54 +116,50 @@
             display: flex;
             justify-content: center;
             opacity: 0;
-            animation: fadeInUp 1s ease-in-out forwards;
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
 
         .image-container img {
-            width: 80%;
+            width: 90%;
             max-width: 500px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
         }
 
         h2 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #FFFFFF;
+            margin-bottom: 20px;
         }
 
         .features {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
+            gap: 20px;
         }
 
         .feature {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 20px;
             width: 280px;
             font-weight: bold;
             text-align: center;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
             transition: transform 0.3s;
-            opacity: 0;
-            animation: fadeInUp 1.2s ease-in-out forwards;
         }
 
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 0px 15px #9A6BFF;
+            box-shadow: 0px 0px 20px #9A6BFF;
         }
 
         /* Подвал */
         .footer {
             background: #6A0DAD;
             padding: 20px;
-            color: white;
-            font-size: 1em;
             text-align: center;
+            font-size: 1em;
         }
 
         /* Адаптивность */
@@ -169,6 +182,8 @@
 </head>
 <body>
 
+<div class="gradient-bg"></div>
+
 <header>
     <img src="logo_resized.png" alt="AI SkillHub Logo" class="logo">
     <h1>AI SkillHub</h1>
@@ -180,11 +195,10 @@
 <section class="section">
     <div class="text-container">
         <h2>Наши услуги</h2>
-        <p>Мы поможем вам внедрить AI-ассистентов и автоматизировать ваш бизнес.</p>
         <div class="features">
-            <div class="feature">📌 Разработка AI-ассистентов</div>
-            <div class="feature">🤖 Чат-боты для бизнеса</div>
-            <div class="feature">🚀 Обучение и мастер-классы</div>
+            <div class="feature">🤖 AI-ассистенты для бизнеса</div>
+            <div class="feature">📌 Чат-боты и автоматизация</div>
+            <div class="feature">🚀 Обучение нейросетям</div>
         </div>
     </div>
     <div class="image-container">
@@ -198,9 +212,9 @@
         <img src="reviews.png" alt="Отзывы">
     </div>
     <div class="text-container">
-        <h2>Отзывы наших клиентов</h2>
+        <h2>Что говорят клиенты?</h2>
         <div class="features">
-            <div class="feature">💬 «AI-ассистент увеличил продажи на 40%!»</div>
+            <div class="feature">💬 «AI-ассистент увеличил продажи!»</div>
             <div class="feature">💬 «Теперь мой бизнес автоматизирован!»</div>
         </div>
     </div>
@@ -209,15 +223,14 @@
 <!-- CTA -->
 <section class="section">
     <div class="text-container">
-        <h2>Готовы начать?</h2>
-        <p>Записывайтесь на обучение или консультацию – и начните внедрять AI уже сегодня!</p>
-        <a href="https://t.me/yourbot" class="cta-button">Записаться</a>
+        <h2>Готовы внедрить AI?</h2>
+        <a href="https://t.me/yourbot" class="cta-button">Начать сейчас</a>
     </div>
 </section>
 
 <!-- Подвал -->
 <footer class="footer">
-    <p>© 2025 AI SkillHub | Контакты: info@aiskillhub.com | Telegram: @yourbot</p>
+    <p>© 2025 AI SkillHub | info@aiskillhub.com | Telegram: @yourbot</p>
 </footer>
 
 </body>
