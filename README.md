@@ -18,7 +18,7 @@
             text-align: center;
         }
 
-        /* Шапка */
+        /* Шапка */		
         header {
             padding: 50px 20px;
             text-align: center;
@@ -119,7 +119,7 @@
 <body>
 
 <header>
-    <img src="logo_resized.png" alt="AI SkillHub Logo" class="logo">
+   " <img src="logo_resized.png" alt="AI SkillHub Logo" class="logo">"
     <h1>AI SkillHub</h1>
     <p>Разработка AI-ассистентов, автоматизация процессов и обучение нейросетям.</p>
     <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
@@ -155,7 +155,7 @@
 <section class="section dark-section">
     <h2>Хотите внедрить AI?</h2>
     <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время!</p>
-    <a href="https://t.me/yourbot" class="cta-button">Оставить заявку</a>
+    <a href="https://t.me/proverka555777_bot" class="cta-button">Оставить заявку</a>
 </section>
 
 <footer class="footer">
