@@ -86,10 +86,15 @@
       padding: 20px;
       font-size: 0.9em;
     }
-    /* Или оберните виджет в контейнер */
+    /* Виджет от Eleven Labs всегда виден */
     .widget-container {
-      max-width: 300px; /* задайте нужное значение */
-      margin: 0 auto;
+      max-width: 300px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      transform: scale(0.8);
+      transform-origin: top left;
     }
   </style>
 </head>
@@ -122,14 +127,13 @@
     <h2>Готовы внедрить AI?</h2>
     <p>Начните внедрять инновационные решения уже сегодня!</p>
     <a href="https://t.me/Luna555" class="cta-button">Начать сейчас</a>
-    }
-
-
- <div class="widget-container">
-  <elevenlabs-convai agent-id="oE04yWq5xXVYgfI3kOnz"></elevenlabs-convai>
-  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-</div>
   </section>
+
+  <!-- Виджет от Eleven Labs всегда виден -->
+  <div class="widget-container">
+    <elevenlabs-convai agent-id="oE04yWq5xXVYgfI3kOnz"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+  </div>
 
   <footer class="footer">
     <p>© 2025 AI SkillHub | info@aiskillhub.com | Telegram: @Luna555</p>
