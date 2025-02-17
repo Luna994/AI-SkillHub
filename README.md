@@ -119,7 +119,7 @@
 <body>
 
 <header>
-   " <img src="logo.png" alt="AI SkillHub Logo" class="logo">"
+  
     <h1>AI SkillHub</h1>
     <p>Разработка AI-ассистентов, автоматизация процессов и обучение нейросетям.</p>
     <a href="https://t.me/yourbot" class="cta-button">Записаться на мастер-класс</a>
